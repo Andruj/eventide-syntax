@@ -1,5 +1,5 @@
 {
-  "name": "monokai-slate",
+  "name": "eventide-syntax",
   "theme": "syntax",
   "version": "0.5.0",
   "description": "A Monokai syntax theme variant with some subtle, relaxing tweaks",
@@ -8,14 +8,11 @@
     "url": "https://github.com/hamxiaoz/monokai-slate"
   },
   "keywords": [
-    "monokai"
+    "monokai", "atom", "syntax", "dart", "eventide"
   ],
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "bugs": {
-    "url": "https://github.com/hamxiaoz/monokai-slate/issues"
-  },
-  "homepage": "https://github.com/hamxiaoz/monokai-slate"
+  "homepage": "https://github.com/andruj/eventide-syntax"
 }
