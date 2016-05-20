@@ -1,14 +1,14 @@
 {
   "name": "eventide-syntax",
   "theme": "syntax",
-  "version": "0.5.0",
-  "description": "A Monokai syntax theme variant with some subtle, relaxing tweaks",
+  "version": "1.0.0",
+  "description": "A dark syntax theme variant with some subtle, relaxing tweaks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hamxiaoz/monokai-slate"
+    "url": "https://github.com/andruj/eventide-syntax"
   },
   "keywords": [
-    "monokai", "atom", "syntax", "dart", "eventide"
+    "monokai", "atom", "syntax", "dart", "eventide", "slate"
   ],
   "license": "MIT",
   "engines": {

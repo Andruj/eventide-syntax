@@ -1,37 +1,11 @@
+@import 'stark-colors.less';
 @import 'syntax-variables';
-
-// variable override
-@bg-color: #22282A;
-@text-color: #d0d0d0;
-@text-color-gfm: fade(@text-color, 70%);
-@string-color: #2aa198;
-@constant-color: #dc322f;
-@comment-color: fade(@text-color, 50%);
-@variable-color: #FD971F;
-@list-color-gfm: fade(#F92672, 80%);
-@hr-color-gfm: #268BD2;
-
-// mac
-.platform-darwin {
-  atom-text-editor, :host {
-    line-height:1.3em;
-    font-family: Menlo;
-    font-size: 12px;
-  }
-}
-
-// win
-.platform-win32 {
-  atom-text-editor, :host {
-    line-height:1.3em;
-    font-family: consolas;
-    font-size: 12px;
-  }
-}
+@import 'editor-variables';
+@import 'languages/dart.less';
 
 atom-text-editor, :host {
-  background-color: @bg-color;
-  color: @text-color;
+  background-color: @editor-background;
+  color: @editor-text;
 
   .invisible-character {
     color: @syntax-invisible-character-color;
@@ -48,9 +22,11 @@ atom-text-editor, :host {
 
   .gutter {
     background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
 
     .cursor-line {
       background-color: @syntax-gutter-background-color-selected;
+      color: @syntax-gutter-text-color-selected;
     }
   }
 
@@ -59,7 +35,7 @@ atom-text-editor, :host {
   }
 
   .invisible {
-    color: @syntax-text-color;
+    color: @editor-text;
   }
 
   .cursor {
@@ -80,21 +56,21 @@ atom-text-editor, :host {
   }
 
   .gfm {
-    color: @text-color-gfm;
+    color: @light-gray;
 
     // >this is quote
     .quote {
-      color: @string-color;
+      color: @teal;
     }
 
     .markup {
       &.heading {
-        color: @constant-color;
+        color: @salmon;
         // font-weight: bold;
       }
 
       &.underline {
-        color: @comment-color;
+        color: @gray;
         text-decoration: underline;
       }
     }
@@ -109,52 +85,54 @@ atom-text-editor, :host {
 
     // `this is row`
     .raw {
-      color: @string-color;
+      color: @teal;
     }
 
     .variable.list {
-      color: @list-color-gfm;
       font-weight: bold;
     }
 
     .link {
-      color: @comment-color;
+      color: @gray;
 
       .entity {
-        color: @variable-color;
+        color: @orange;
       }
     }
 
     .hr {
-      color: @hr-color-gfm;
     }
   }
 }
 
 .comment {
-  color: @comment-color;
+  color: @editor-comments;
 }
 
 .string {
-  color: @string-color;
+  color: @teal;
 }
 
 .constant.numeric {
-  color: #AE81FF;
+  color: @lavender;
 }
 
 .constant.language {
-  color: #AE81FF;
+  color: @lavender;
 }
 
 .constant.character,
 .constant.escape,
 .constant.other {
-  color: @constant-color;
+  color: @salmon;
 }
 
 .keyword {
-  color: #F92672;
+  color: @magenta;
+}
+
+.punctuation {
+  color: @lighter-gray;
 }
 
 .keyword.operator.bracket,
@@ -164,23 +142,23 @@ atom-text-editor, :host {
 }
 
 .storage {
-  color: #F92672;
+  color: @magenta;
 }
 
 .storage.type {
   font-style: italic;
-  color: #66D9EF;
+  color: @light-blue;
 }
 
 .entity.name.class {
   text-decoration: none;
-  color: #A6E22E;
+  color: @lime;
 }
 
 .entity.other.inherited-class {
   font-style: italic;
   text-decoration: none;
-  color: #A6E22E;
+  color: @lime;
 }
 
 // Prevent underlines from making their way into whitespace elements
@@ -190,65 +168,60 @@ atom-text-editor, :host {
 }
 
 .entity.name.function {
-  color: #A6E22E;
+  color: @lime;
 }
 
 .entity.name.instance {
-  color: #66D9EF;
+  color: @light-blue;
 }
 
 // AZ variable same color as parameter
 .variable {
-  color: #FD971F;
+  color: @orange;
 }
 
 .variable.parameter {
   font-style: italic;
-  color: #FD971F;
+  color: @orange;
 }
 
 .entity.name.tag {
-  color: #F92672;
+  color: @magenta;
 }
 
 .entity.other.attribute-name {
-  color: #A6E22E;
+  color: @lime;
 }
 
 .support.function {
-  color: #66D9EF;
+  color: @light-blue;
 }
 
 .support.function.decl {
-  color: #A6E22E;
+  color: @lime;
 }
 
 .support.constant {
-  color: #66D9EF;
+  color: @light-blue;
 }
 
 .support.type,
 .support.class {
   font-style: italic;
-  color: #66D9EF;
+  color: @light-blue;
 }
 
 .invalid {
   color: #F8F8F0;
-  background-color: #F92672;
+  background-color: @magenta;
 }
 
 .invalid.deprecated {
   color: #F8F8F0;
-  background-color: #AE81FF;
-}
-
-// Jade syntax
-.class.jade {
-  color: #AE81FF;
+  background-color: @lavender;
 }
 
 // 'this' Javascript
 .variable.language.js {
-  color: #F92672;
+  color: @magenta;
 }

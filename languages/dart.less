@@ -1,0 +1,42 @@
+@import 'original-colors.less';
+
+// Makes 'this' orange...
+.variable.language.dart {
+  color: @orange;
+}
+
+.dart {
+
+  // Decorators.
+  .storage.annotation {
+    color: @orange;
+  }
+
+  // Generic catchall for keywords.
+  .keyword {
+    color: @salmon;
+  }
+
+  // class, extends...
+  .declaration {
+    color: @lime;
+  }
+
+  // static, final...
+  .modifier {
+    color: @orange;
+  }
+  // async, await...
+  .control {
+    color: @magenta;
+  }
+
+  // Template string variables...
+  .variable.parameter {
+    color: @orange;
+  }
+
+  .variable.name.source {
+    color: fade(desaturate(@light-blue, 25%), 50%);
+  }
+}

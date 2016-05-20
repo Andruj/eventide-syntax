@@ -1,21 +1,11 @@
-**NOTE this is based on the monokai-shade theme with some color/font tweaks**
+# Eventide Syntax Theme
 
-```
-# monokai-shade theme
+Originally forked from [Monokai-Slate](https://github.com/hamxiaoz/monokai-slate).
 
-A Monokai syntax theme variant with some subtle, relaxing tweaks
+A dark, and vibrant syntax theme that balances low contrast and visible colors.
 
-Based on the original Atom Monokai theme - https://github.com/kevinsawicki/monokai
+### Features
+- Improved Dart Syntax highlighting
+- Reduced Color Intensity
 
-### Tweaks
-- increased line-height
-- changed default font
-- subtle, low-contrast invisible characters
-- toned down wrap-guide
-- changed bg color to match Monokai from Sublime
-- more padding in line number gutter
-- brighter highlighting
-```
-
-![](https://raw.githubusercontent.com/hamxiaoz/monokai-slate/master/preview/coffee.png)
-![](https://raw.githubusercontent.com/hamxiaoz/monokai-slate/master/preview/md.png)
+![](https://raw.githubusercontent.com/andruj/eventide-syntax/master/example.png)
